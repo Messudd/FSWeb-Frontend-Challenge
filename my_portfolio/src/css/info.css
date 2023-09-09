@@ -1,0 +1,64 @@
+.info-img {
+    background: url("https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4NAwrInfpEhTT3Kti5eMA6/e5e7a301fc824d01dda224830a065135/GettyImages-1341554760.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000&h=");
+    background-repeat: no-repeat;
+    flex: 1;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 2px  #000;
+    transform: rotate(2deg);
+}
+.info_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding-right: 45px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+.info_right h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color:#1F2937;
+}
+.info_right h3 {
+    color: rgba(71, 49, 211, 1);
+}
+.info_right span {
+    margin-right: 10px;
+    color: #3730A3;
+}
+.info_right p {
+    color:  #6B7280;
+    font-size: 1.2rem;
+    line-height: 26px;
+    font-weight: 400;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap:10px;
+}
+.info_right button {
+    border: 1.5px solid #3730A3;
+    background-color: #ffff;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+.info_right .icon {
+    margin-right: 5px;
+    color: #3730A3;
+    font-size: 1.5rem;
+    
+}
+.default {
+    color: #ffff;
+}

@@ -1,0 +1,13 @@
+.skillsMap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  gap: 60px;
+}
+
+.skills h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color:#1F2937;
+    margin-bottom: 5px;
+}

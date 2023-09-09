@@ -1,0 +1,134 @@
+@font-face {
+    font-family: inter;
+    src: url('./../font/Inter-Regular.ttf');
+}
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.nav-first {
+    display: flex;
+    max-width: 65%;
+    margin: 10px auto;
+    justify-content: flex-end;
+    align-items:center;
+    padding: 10px 60px 10px 5px;
+}
+.nav-seccond {
+    display: flex;
+    max-width: 70%;
+    margin: 10px auto;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 40px;
+    padding: 10px 60px 10px 5px; 
+}
+.switch {
+    margin-right: 10px;
+}
+.nav-first .switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+  }
+.nav-first .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(58, 58, 58, 1); 
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 2px;
+    bottom: 3px;
+    background-color: rgba(255, 232, 110, 1);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+input:checked + .slider {
+    background-color: rgba(71, 49, 211, 1);
+  }
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px rgba(71, 49, 211, 1);
+  }
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(25px);
+  }
+.slider.round {
+    border-radius: 30px;
+  }
+  
+.slider.round:before {
+    border-radius: 50%;
+  }
+.mode-span{
+    font-size: 12px;
+    font-family: inter;
+    font-weight: 600;
+}
+.language-btn {
+    background-color: #fff;
+    font-family: inter;
+    font-size: 12px;
+    margin-left: 8px;
+    border:none;
+    font-weight: 600;
+    cursor:pointer;
+}
+.tick {
+    margin: 0 10px;
+    font-weight: 600;
+    color: rgba(119, 119, 119, 1);
+}
+.nav-seccond span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: #EEEBFF;
+    color: #7B61FF;
+    font-size: 20px;
+    font-weight: 600;
+    transform: rotate(45deg);  
+}
+.nav-seccond button {
+    padding: 10px 22px;
+    margin: 18px;
+    border:1px solid transparent;
+    border-radius: 4px;
+    cursor:pointer;
+    background-color: #fff;
+    color:#6B7280;
+    font-weight: 500;
+    font-size: 1rem;
+    transition:  all ease .4s;
+}
+.nav-seccond .links .hire_me{
+    border:1px solid #3730A3;
+    color: #3730A3;
+}
+.nav-seccond button:hover {
+    border:1px solid #3730A3;
+    color: #3730A3;
+}
