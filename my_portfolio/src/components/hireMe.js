@@ -1,7 +1,9 @@
 import React, { useContext, useEffect, useRef } from "react";
+import {useHistory} from 'react-router-dom';
 import { dataContext } from "../context/dataContext";
 import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import* as Yup from 'yup';
 import "react-toastify/dist/ReactToastify.css";
 import "../css/hireMe.css";
 
@@ -9,11 +11,13 @@ const HireMe = () => {
   const myState = useContext(dataContext);
   const { formData, setFormData } = myState;
 
+  const history = useHistory();
+
   const form = useRef();
 
   const toast_data = {
-    position: "top-center",
-    autoClose: 500,
+    position: "top-right",
+    autoClose: 400,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -21,7 +25,20 @@ const HireMe = () => {
     progress: undefined,
     theme: "light",
   };
+  const resetData = {
+    name : '',
+    surname: '',
+    email: '',
+    topic: '',
+    comment: ''
+};
 
+  const handleReset = () => {
+    setFormData({...resetData});
+  }
+  const goMainPage = () => {
+    history.push('/');
+  }
   const handleInputChange = (e) => {
     const { value, type, name } = e.target;
     setFormData({
@@ -31,9 +48,9 @@ const HireMe = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    emailjs
+    await emailjs
       .sendForm(
         "service_qonlnrv",
         "template_ejsj4sn",
@@ -43,16 +60,20 @@ const HireMe = () => {
       .then(
         (result) => {
           if (result.status === 200) {
-            console.log("Email - gönderildi ... ", result.text);
+            console.log("Email - gönderildi ...", result.text);
             setTimeout(() => {
-              toast.success("Mesaj Gönderildi ! ", { ...toast_data });
+                setFormData({...resetData});
+              toast.success("Mesaj Gönderildi ! 👍", { ...toast_data });
             }, 200);
+            setTimeout(() => {
+                history.push('/');
+            },2000);
           }
         },
         (error) => {
           console.log(error.status, error.text);
           setTimeout(() => {
-            toast.error("Hay Aksi Başarısız Gönderi !", { ...toast_data });
+            toast.error("Hay Aksi Başarısız Gönderi ! ⚠️", { ...toast_data });
           }, 200);
         }
       );
@@ -65,12 +86,17 @@ const HireMe = () => {
   return (
     <div className="container">
       <div className="form-container">
+        <span className="back" onClick={goMainPage} style={{fontSize:'1.5rem' , cursor: 'pointer'}}>⬅</span>
+        <h2>
+          Bana Ulaş !<span>👇</span>
+        </h2>
         <form ref={form} onSubmit={handleSubmit}>
           <div className="name">
             <input
               id="name"
               type="text"
               name="name"
+              value={formData.name}
               placeholder="Enter Name "
               onChange={handleInputChange}
             />
@@ -79,6 +105,7 @@ const HireMe = () => {
             <input
               id="surname"
               type="text"
+              value={formData.surname}
               name="surname"
               placeholder="Enter Surname "
               onChange={handleInputChange}
@@ -88,6 +115,7 @@ const HireMe = () => {
             <input
               id="email"
               type="email"
+              value={formData.email}
               name="email"
               placeholder="Email"
               onChange={handleInputChange}
@@ -97,6 +125,7 @@ const HireMe = () => {
             <input
               id="topic"
               type="text"
+              value={formData.topic}
               name="topic"
               placeholder="Enter a Topic ..."
               onChange={handleInputChange}
@@ -106,20 +135,21 @@ const HireMe = () => {
             <textarea
               id="comment"
               type="textarea"
+              value={formData.comment}
               name="comment"
               placeholder="Message..."
-              rows={8}
-              cols={30}
+              rows={4}
+              cols={20}
               onChange={handleInputChange}
             />
           </div>
           <div className="button-form">
             <button type="submit">Send</button>
-            <button type="button">Reset</button>
+            <button type="button" onClick={handleReset}>Reset</button>
           </div>
           <ToastContainer
-            position="top-center"
-            autoClose={500}
+            position="top-right"
+            autoClose={400}
             hideProgressBar={false}
             newestOnTop={false}
             closeOnClick
@@ -136,25 +166,3 @@ const HireMe = () => {
 };
 
 export default HireMe;
-
-//############### Axios Post Request --  Form Submit #######################################
-
-// e.preventDefault();
-// await axios
-//   .post("https://reqres.in/api/users", formData)
-//   .then((res) => {
-//     if(res.status === 201){
-//         setFormData(res.data);
-//         setTimeout(() => {
-//             toast.success('Mesaj Gönderildi ! ', {...toast_data});
-//         },200);
-//     }
-//   })
-//   .catch((err) => {
-//     console.log(("Sunucu Hatası :( ", err));
-//     setTimeout(() => {
-//         toast.error('Hay Aksi Başarısız Gönderi !', {...toast_data});
-//     },200);
-//   })
-
-//############### Axios Post Request --  Form Submit #######################################

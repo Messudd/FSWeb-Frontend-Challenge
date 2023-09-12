@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom";
 import BottomNav from "./components/bottomNav";
 import { useContext } from "react";
 import { dataContext } from "./context/dataContext";
+import AnimatedPage from "./components/animatedPage";
 import HireMe from "./components/hireMe";
 import "./app.css";
 
@@ -47,7 +48,9 @@ function App() {
         </div>
       </Route>
       <Route path="/contact_me" exact>
-         <HireMe/>
+        <AnimatedPage>
+          <HireMe />
+        </AnimatedPage>
       </Route>
     </Switch>
   );
