@@ -7,10 +7,11 @@ const Skills = () => {
   const myState = useContext(dataContext);
   const skillName = myState.data.skills.name;
   const skillContent = myState.data.skills.content;
+  const temaMode = myState.mode;
 
   return (
     <div className="skills">
-      <h1>Skills</h1>
+      <h1 style={{color: !(temaMode) && '#AEBCCF'}}>Skills</h1>
       <div className="skillsMap">
         {skillName.map((skill_name, index) => (
           <Skill

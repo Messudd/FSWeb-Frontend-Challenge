@@ -2,14 +2,10 @@
     font-family: inter;
     src: url('./../font/Inter-Regular.ttf');
 }
-body {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
 .nav-first {
     display: flex;
     max-width: 65%;
-    margin: 10px auto;
+    margin: 0 auto;
     justify-content: flex-end;
     align-items:center;
     padding: 10px 60px 10px 5px;
@@ -112,12 +108,12 @@ input:checked + .slider:before {
     font-weight: 600;
     transform: rotate(45deg);  
 }
-.nav-seccond button {
+.nav-seccond a {
     padding: 10px 22px;
     margin: 18px;
     border:1px solid transparent;
     border-radius: 4px;
-    cursor:pointer;
+    text-decoration: none;
     background-color: #fff;
     color:#6B7280;
     font-weight: 500;
@@ -128,7 +124,7 @@ input:checked + .slider:before {
     border:1px solid #3730A3;
     color: #3730A3;
 }
-.nav-seccond button:hover {
+.nav-seccond a:hover {
     border:1px solid #3730A3;
     color: #3730A3;
 }

@@ -1,29 +1,94 @@
-import React, { useContext } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import React, { useContext, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { dataContext } from "../context/dataContext";
-import './../css/info.css';
+import { Link } from "react-router-dom";
+import "./../css/info.css";
 
 function Info() {
-
   const myData = useContext(dataContext);
+  const themeMode = myData.mode;
+  const [hover, setIsHover] = useState(false);
+  const [hoverGit, setIsHoverGit] = useState(false);
+
+  const text_color_head = {
+    color: !themeMode && "#AEBCCF",
+  };
+  const text_color = {
+    color: !themeMode && "#fff",
+  };
+  const textName = {
+    color: !themeMode && "#B7AAFF",
+  };
+  const buttonTheme = {
+    color: !themeMode && "#E1E1FF",
+    backgroundColor: !themeMode && "#383838",
+    border: !themeMode && "1px solid #E1E1FF",
+  };
+
+  const hoverEnterMethod = () => {
+    setIsHover(true);
+  };
+  const hoverLeaveMethod = () => {
+    setIsHover(false);
+  };
+
+  const hoverEnterMethodSeccond = () => {
+    setIsHoverGit(true);
+  };
+  const hoverLeaveMethodSeccond = () => {
+    setIsHoverGit(false);
+  };
 
   return (
     <>
       <div className="info_right">
-        <h3><span>—————</span>Mesud AYDIN</h3>
-        <h1>{myData.data.intro.head}</h1>
-        <p>{myData.data.intro.content}</p>
+        <h3 style={textName}>
+          <span style={textName}>—————</span>Mesud AYDIN
+        </h3>
+        <h1 style={text_color_head}>{myData.data.intro.head}</h1>
+        <p style={text_color}>{myData.data.intro.content}</p>
         <div className="buttons">
-          <button className="default" style={{padding: '12px 22px',backgroundColor:'#3730A3'}}>Hire me</button>
-          <button>
-           <FontAwesomeIcon className="icon" icon = {faGithub}/>
+          <Link
+            className="default"
+            style={{
+              padding: "12px 22px",
+              backgroundColor: !themeMode ? "#E1E1FF" : "#3730A3",
+              color: !themeMode ? "#000" : "#fff",
+            }}
+          >
+            Hire me
+          </Link>
+          <Link
+            style={{
+              ...buttonTheme,
+              transform: hoverGit && "scale(1.05 ,1)",
+            }}
+            onMouseEnter={hoverEnterMethodSeccond}
+            onMouseLeave={hoverLeaveMethodSeccond}
+          >
+            <FontAwesomeIcon
+              className="icon"
+              style={{ color: !themeMode && "#BAB2E7" }}
+              icon={faGithub}
+            />
             Github
-          </button>
-          <button>
-            <FontAwesomeIcon className="icon" icon = {faLinkedin}/>
+          </Link>
+          <Link
+            onMouseEnter={hoverEnterMethod}
+            onMouseLeave={hoverLeaveMethod}
+            style={{
+              ...buttonTheme,
+              transform: hover && "scale(1.05 ,1)",
+            }}
+          >
+            <FontAwesomeIcon
+              className="icon"
+              style={{ color: !themeMode && "#BAB2E7" }}
+              icon={faLinkedin}
+            />
             Linkedin
-          </button>
+          </Link>
         </div>
       </div>
       <div className="info-img"></div>

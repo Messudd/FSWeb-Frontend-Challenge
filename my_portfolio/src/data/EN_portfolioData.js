@@ -22,8 +22,26 @@ const myInfo = {
   },
   projects: [
     {
-      image: "https://i.ytimg.com/vi/IPHOFK1rUA0/maxresdefault.jpg",
-      name: "Workintech",
+      image: './../image/pizzaApp.png',
+      name: "Pizza Order",
+      content:
+        "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+      used: ["React", "Redux", "Axios"],
+      github: "https://github.com/Messudd",
+      url: "https://challenge-pizza-orcku6296-messudd.vercel.app/",
+    },
+    {
+      image: './../image/Film_App.png',
+      name: "Film App",
+      content:
+        "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+      used: ["React", "Redux", "Axios"],
+      github: "https://github.com/Messudd",
+      url: "https://react-film-ghy8i4ap6-messudd.vercel.app/",
+    },
+    {
+      image: './../image/playerAPP.png',
+      name: "Player Form",
       content:
         "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
       used: ["React", "Redux", "Axios"],
@@ -31,17 +49,26 @@ const myInfo = {
       url: "https://google.com.tr",
     },
     {
-      image: "https://i.ytimg.com/vi/IPHOFK1rUA0/maxresdefault.jpg",
-      name: "Random Jokes",
+      image: './../image/pizzaApp.png',
+      name: "Pizza Order",
       content:
         "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
       used: ["React", "Redux", "Axios"],
       github: "https://github.com/Messudd",
-      url: "https://google.com.tr",
+      url: "https://challenge-pizza-orcku6296-messudd.vercel.app/",
     },
     {
-      image: "https://i.ytimg.com/vi/IPHOFK1rUA0/maxresdefault.jpg",
-      name: "Journey",
+      image: './../image/Film_App.png',
+      name: "Film App",
+      content:
+        "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+      used: ["React", "Redux", "Axios"],
+      github: "https://github.com/Messudd",
+      url: "https://react-film-ghy8i4ap6-messudd.vercel.app/",
+    },
+    {
+      image: './../image/playerAPP.png',
+      name: "Player Form",
       content:
         "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
       used: ["React", "Redux", "Axios"],

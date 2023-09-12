@@ -22,8 +22,7 @@ const myTR_Info = {
     },
     projects: [
       {
-        image:
-          "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fbecome-a-better-developer-by-building-projects%2F&psig=AOvVaw1FxyEXbI1PJy6-8me4Q8vJ&ust=1694201886014000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPCDp_6fmYEDFQAAAAAdAAAAABAE",
+        image: './../image/Film_App.png',
         name: "Workintech",
         content:
           "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
