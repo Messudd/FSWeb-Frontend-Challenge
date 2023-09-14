@@ -11,7 +11,9 @@ const Skills = () => {
 
   return (
     <div className="skills">
-      <h1 style={{color: !(temaMode) && '#AEBCCF'}}>Skills</h1>
+      <h1 style={{ color: !temaMode && "#AEBCCF" }}>
+        {myState.data.other.skill}
+      </h1>
       <div className="skillsMap">
         {skillName.map((skill_name, index) => (
           <Skill

@@ -1,19 +1,46 @@
-import React, { useContext, useEffect, useRef } from "react";
-import {useHistory} from 'react-router-dom';
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { dataContext } from "../context/dataContext";
 import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
-import* as Yup from 'yup';
+import * as Yup from "yup";
 import "react-toastify/dist/ReactToastify.css";
 import "../css/hireMe.css";
 
 const HireMe = () => {
   const myState = useContext(dataContext);
-  const { formData, setFormData } = myState;
+  const resetData = {
+    name: "",
+    surname: "",
+    email: "",
+    topic: "",
+    comment: "",
+  };
+  const { formData, setFormData, data, mode } = myState;
+  const [formErrors, setFormErrors] = useState({ ...resetData });
+  const [isValid, setFormValid] = useState(false);
 
   const history = useHistory();
-
   const form = useRef();
+
+  const schema = Yup.object().shape({
+    name: Yup.string()
+      .required("Name required ...")
+      .min(3, "Must be at least 3 characters !"),
+    surname: Yup.string()
+      .strict()
+      .uppercase("Write in capital letters")
+      .required("Surname required..."),
+    email: Yup.string()
+      .email("Invalid email !")
+      .required("Please enter an e-posta adress..."),
+    topic: Yup.string()
+      .required("Specify a topic !")
+      .max(20, "Up to 20 characters !"),
+    comment: Yup.string()
+      .required("Write a comment ...")
+      .min(10, "Must be at least 10 characters "),
+  });
 
   const toast_data = {
     position: "top-right",
@@ -23,24 +50,29 @@ const HireMe = () => {
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: "light",
+    theme: mode ? 'light' : 'dark'
   };
-  const resetData = {
-    name : '',
-    surname: '',
-    email: '',
-    topic: '',
-    comment: ''
-};
+  const colorGround = {
+    backgroundColor: !mode && "rgb(55, 50, 59)",
+    borderBottom: !mode && "2px solid #fff",
+  };
 
   const handleReset = () => {
-    setFormData({...resetData});
-  }
+    setFormData({ ...resetData });
+  };
   const goMainPage = () => {
-    history.push('/');
-  }
+    history.push("/");
+  };
   const handleInputChange = (e) => {
     const { value, type, name } = e.target;
+    Yup.reach(schema, name)
+      .validate(value)
+      .then((valid) => {
+        setFormErrors({ ...formErrors, [name]: "" });
+      })
+      .catch((err) => {
+        setFormErrors({ ...formErrors, [name]: err.errors[0] });
+      });
     setFormData({
       ...formData,
       [name]:
@@ -48,7 +80,7 @@ const HireMe = () => {
     });
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     await emailjs
       .sendForm(
@@ -62,12 +94,12 @@ const HireMe = () => {
           if (result.status === 200) {
             console.log("Email - gönderildi ...", result.text);
             setTimeout(() => {
-                setFormData({...resetData});
+              setFormData({ ...resetData });
               toast.success("Mesaj Gönderildi ! 👍", { ...toast_data });
             }, 200);
             setTimeout(() => {
-                history.push('/');
-            },2000);
+              history.push("/");
+            }, 2000);
           }
         },
         (error) => {
@@ -80,15 +112,33 @@ const HireMe = () => {
   };
 
   useEffect(() => {
-    console.log("form_data : ", formData);
-  }, [formData]);
+    console.log("form_data : ", form.current);
+    schema.isValid(formData).then((valid) => setFormValid(valid));
+  }, [formData, schema]);
 
   return (
-    <div className="container">
-      <div className="form-container">
-        <span className="back" onClick={goMainPage} style={{fontSize:'1.5rem' , cursor: 'pointer'}}>⬅</span>
-        <h2>
-          Bana Ulaş !<span>👇</span>
+    <div
+      style={{ backgroundColor: !mode && "rgb(37, 33, 40)" }}
+      className="container"
+    >
+      <div
+        style={{ ...colorGround, borderRadius: "4px" }}
+        className="form-container"
+      >
+        <span
+          className="back"
+          onClick={goMainPage}
+          style={{
+            fontSize: "1.5rem",
+            cursor: "pointer",
+            color: !mode && "#fff",
+          }}
+        >
+          ⬅
+        </span>
+        <h2 style={{ color: !mode && "#fff" }}>
+          {data.other.con}
+          <span>👇</span>
         </h2>
         <form ref={form} onSubmit={handleSubmit}>
           <div className="name">
@@ -99,8 +149,14 @@ const HireMe = () => {
               value={formData.name}
               placeholder="Enter Name "
               onChange={handleInputChange}
+              style={colorGround}
             />
           </div>
+          {!!formErrors.name && (
+            <p style={{ color: "darkred", fontSize: "0.8rem" }}>
+              {formErrors.name}
+            </p>
+          )}
           <div className="surname">
             <input
               id="surname"
@@ -109,8 +165,14 @@ const HireMe = () => {
               name="surname"
               placeholder="Enter Surname "
               onChange={handleInputChange}
+              style={colorGround}
             />
           </div>
+          {!!formErrors.surname && (
+            <p style={{ color: "darkred", fontSize: "0.8rem" }}>
+              {formErrors.surname}
+            </p>
+          )}
           <div className="email">
             <input
               id="email"
@@ -119,8 +181,14 @@ const HireMe = () => {
               name="email"
               placeholder="Email"
               onChange={handleInputChange}
+              style={colorGround}
             />
           </div>
+          {!!formErrors.email && (
+            <p style={{ color: "darkred", fontSize: "0.8rem" }}>
+              {formErrors.email}
+            </p>
+          )}
           <div className="topic">
             <input
               id="topic"
@@ -129,8 +197,14 @@ const HireMe = () => {
               name="topic"
               placeholder="Enter a Topic ..."
               onChange={handleInputChange}
+              style={colorGround}
             />
           </div>
+          {!!formErrors.topic && (
+            <p style={{ color: "darkred", fontSize: "0.8rem" }}>
+              {formErrors.topic}
+            </p>
+          )}
           <div className="comment">
             <textarea
               id="comment"
@@ -141,11 +215,37 @@ const HireMe = () => {
               rows={4}
               cols={20}
               onChange={handleInputChange}
+              style={colorGround}
             />
           </div>
+          {!!formErrors.comment && (
+            <p style={{ color: "darkred", fontSize: "0.8rem" }}>
+              {formErrors.comment}
+            </p>
+          )}
           <div className="button-form">
-            <button type="submit">Send</button>
-            <button type="button" onClick={handleReset}>Reset</button>
+            <button
+              type="submit"
+              disabled={!isValid}
+              style={{
+                backgroundColor: !mode && "rgb(56, 56, 56)",
+                color: !mode && "rgb(225,225,225",
+                border: !mode && '1px solid #fff'
+              }}
+            >
+              {data.other.send}
+            </button>
+            <button
+              type="button"
+              onClick={handleReset}
+              style={{
+                backgroundColor: !mode && "rgb(56, 56, 56)",
+                color: !mode && "rgb(225,225,225",
+                border: !mode && '1px solid #fff'
+              }}
+            >
+              {data.other.res}
+            </button>
           </div>
           <ToastContainer
             position="top-right"
@@ -157,7 +257,7 @@ const HireMe = () => {
             pauseOnFocusLoss
             draggable
             pauseOnHover
-            theme="light"
+            theme= {mode ? "light" : 'dark'}
           />
         </form>
       </div>

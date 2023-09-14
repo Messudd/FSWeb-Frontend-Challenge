@@ -1,0 +1,101 @@
+.infoBody{
+    width: 100vw;
+    min-height: max-content;
+    padding: 50px 0;
+}
+.moreInfoPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.moreInfo {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border:1px solid rgba(225, 225, 225, 0.1);
+  border-radius: 5px;
+  gap: 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.moreInfo .spesific_,
+.intro_,
+.experience_,
+.contact_,
+.education_,
+.language_,
+.hobbies_ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  color: #6b7280;
+  padding: 10px 20px;
+}
+.moreInfo div span {
+  letter-spacing: 0.3rem;
+  font-family: inter;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.moreInfo div .ReIcon {
+  cursor: pointer;
+}
+.spec-info,.intro-info,.hobies-div,.lang-div{
+    padding: 0 20px;
+}
+.spec-info div {
+    margin: 5px 0;
+}
+.lang-div p {
+    margin-bottom: 12px;
+}
+.spec-info div span:first-child,
+.lang-div p span:first-child{
+    color:rgb(143, 136, 255);
+    letter-spacing: 0;
+    font-size: 1rem;
+}
+
+.spec-info span:last-child,
+.lang-div p span:last-child{
+    font-size: 1rem;
+    padding-left: 3px;
+    color: rgba(0,0,0,.6);
+}
+.intro-info h3 {
+    color:rgba(143, 136, 255,.8);
+    padding: 2px 0;
+    margin-bottom: 10px;
+
+}
+.intro-info p {
+    letter-spacing: 0.05rem;
+    font-size: 1rem;
+    color: rgba(0,0,0,.6);
+    line-height: 20px;
+}
+.hobies-div li {
+    letter-spacing: 0.05rem;
+    font-size: 1rem;
+    color: rgba(0,0,0,.6);
+    margin: 4px 0;
+}
+.ReIcon:hover{
+   color: #000;
+}
+.infoBody h2{
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+}
+.infoBody h2 span{
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+.lang-div p span:last-child{
+    font-size: 0.8rem;
+}

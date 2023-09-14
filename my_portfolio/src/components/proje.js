@@ -6,6 +6,7 @@ import '../css/proje.css'
 const Proje = ({ projeData }) => {
   const { used } = projeData;
   const stateMine = useContext(dataContext);
+  const {other} = stateMine.data;
   const tema = stateMine.mode;
 
   const span_tema = {
@@ -27,8 +28,8 @@ const Proje = ({ projeData }) => {
         ))}
       </div>
       <div className="linkss">
-        <Link href = '/' target = '_blank' style = {{color: !tema && '#E1E1FF',borderBottom: !tema && '1px solid #E1E1FF'}}>Github</Link>
-        <Link to = {{ pathname :`${projeData.url}` }} target = '_blank' style = {{color: !tema && '#E1E1FF',borderBottom: !tema && '1px solid #E1E1FF'}}>View Site</Link>
+        <Link to = {{pathname: `${projeData.github}`}} target = '_blank' style = {{color: !tema && '#E1E1FF',borderBottom: !tema && '1px solid #E1E1FF'}}>Github</Link>
+        <Link to = {{ pathname :`${projeData.url}` }} target = '_blank' style = {{color: !tema && '#E1E1FF',borderBottom: !tema && '1px solid #E1E1FF'}}>{other.visit}</Link>
       </div>
     </div>
   );

@@ -9,11 +9,15 @@ import { useContext } from "react";
 import { dataContext } from "./context/dataContext";
 import AnimatedPage from "./components/animatedPage";
 import HireMe from "./components/hireMe";
+import MoreInfo from "./components/moreInfo";
 import "./app.css";
 
 function App() {
+
   const myState = useContext(dataContext);
+  const {other} = myState.data;
   const themeMode = myState.mode;
+
 
   return (
     <Switch>
@@ -36,7 +40,7 @@ function App() {
               <Profile />
             </section>
             <section id="projectss" className="project-section">
-              <h1 style={{ color: !themeMode && "#AEBCCF" }}>Projects</h1>
+              <h1 style={{ color: !themeMode && "#AEBCCF" }}>{other.proj}</h1>
               <article>
                 <Projects />
               </article>
@@ -51,6 +55,9 @@ function App() {
         <AnimatedPage>
           <HireMe />
         </AnimatedPage>
+      </Route>
+      <Route path = '/moreInfo'>
+        <MoreInfo/>
       </Route>
     </Switch>
   );

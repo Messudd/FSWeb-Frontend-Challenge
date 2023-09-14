@@ -14,7 +14,7 @@ import "./../css/topnav.css";
 
 const TopNavbar = () => {
   const myData = useContext(dataContext);
-  const { mode, language, setData } = myData;
+  const { mode, language, setData, data } = myData;
 
   const navColor = {
     color: !mode && "#6B7280",
@@ -34,7 +34,7 @@ const TopNavbar = () => {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "light",
+      theme: mode ? 'light' : 'dark'
     });
     setTimeout(() => {
       myData.setLanguage(!language);
@@ -94,7 +94,7 @@ const TopNavbar = () => {
               fontSize: "12px",
             }}
           >
-            {!language ? "TÜRKÇE" : "İNGİLİZCE"}
+            {data.other.lang}
           </span>
           'YE GEÇ
         </button>
@@ -108,13 +108,13 @@ const TopNavbar = () => {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          theme="light"
+          theme= {mode ? 'light' : 'dark'}
         />
         {/* Same as */}
         <ToastContainer />
       </div>
       <div className="nav-seccond">
-        <span
+        <span className="letter-M"
           style={{
             backgroundColor: !mode && "#4731D3",
             color: !mode && "#8F88FF",
@@ -124,13 +124,13 @@ const TopNavbar = () => {
         </span>
         <div className="links">
           <AnchorLink href="#skillss" style={navColor}>
-            Skills
+            {data.other.skill}
           </AnchorLink>
           <AnchorLink href="#projectss" style={navColor}>
-            Projects
+            {data.other.proj}
           </AnchorLink>
           <Link to = '/contact_me' className="hire_me" style={activeNavColor}>
-            Hire me
+            {data.other.hireMe}
           </Link>
         </div>
       </div>

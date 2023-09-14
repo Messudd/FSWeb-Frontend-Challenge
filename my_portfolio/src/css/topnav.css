@@ -4,24 +4,24 @@
 }
 .nav-first {
     display: flex;
-    max-width: 65%;
+    max-width: 70%;
     margin: 0 auto;
     justify-content: flex-end;
     align-items:center;
-    padding: 10px 60px 10px 5px;
+    padding: 15px 0;
 }
 .nav-seccond {
     display: flex;
+    flex-wrap: wrap;
     max-width: 70%;
-    margin: 10px auto;
+    margin: 25px auto;
     justify-content: space-between;
     align-items:center;
     margin-bottom: 40px;
-    padding: 10px 60px 10px 5px; 
 }
 .switch {
     margin-right: 10px;
-}
+} 
 .nav-first .switch {
     position: relative;
     display: inline-block;
@@ -108,9 +108,13 @@ input:checked + .slider:before {
     font-weight: 600;
     transform: rotate(45deg);  
 }
-.nav-seccond a {
-    padding: 10px 22px;
-    margin: 18px;
+.nav-seccond .links{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 30px;
+}
+.nav-seccond .links  a {
     border:1px solid transparent;
     border-radius: 4px;
     text-decoration: none;
@@ -120,11 +124,31 @@ input:checked + .slider:before {
     font-size: 1rem;
     transition:  all ease .4s;
 }
+.nav-seccond .links a:first-child{
+  padding: 10px 15px;
+  text-align: center;
+  margin-right: 30px;
+}
+.nav-seccond a:nth-child(2){ 
+  padding: 10px 15px;
+  text-align: center;
+  margin-right: 30px;
+}
 .nav-seccond .links .hire_me{
+    padding: 10px 15px;
     border:1px solid #3730A3;
     color: #3730A3;
+    text-align: center;
 }
 .nav-seccond a:hover {
     border:1px solid #3730A3;
     color: #3730A3;
+}
+.letter-M {
+  cursor: default;
+  margin-bottom:  12px;
+  transition-duration: .5s;
+}
+.letter-M:hover {
+  transform: rotate(360deg);
 }

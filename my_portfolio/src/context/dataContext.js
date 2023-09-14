@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from "react";
-import axios from "axios";
+import React, { createContext, useState, useEffect } from "react";
+import axios from 'axios';
 import myInfo from "../data/EN_portfolioData";
 
 export const dataContext = createContext();
@@ -49,8 +49,8 @@ const DataContext = ({ children }) => {
     email : '',
     topic: '',
     comment: ''
-  })
-
+  });
+  
   const postData = async (veri) => {
     await axios
       .post("https://reqres.in/api/users", veri)

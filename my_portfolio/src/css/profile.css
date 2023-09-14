@@ -1,13 +1,14 @@
 .profile-div {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 40px;
 }
 .profile-left{
-    flex: 1;
+    flex: 1 1 200px;
 }
 .profile-right{
-    flex: 1;
+    flex: 1 1 200px;
 }
 .profile h1{
     font-size: 2.5rem;

@@ -19,6 +19,7 @@ function Info() {
   };
   const textName = {
     color: !themeMode && "#B7AAFF",
+    position: "relative",
   };
   const buttonTheme = {
     color: !themeMode && "#E1E1FF",
@@ -43,13 +44,14 @@ function Info() {
   return (
     <>
       <div className="info_right">
-        <h3 style={textName}>
+        <h3 style={textName} id="referans">
           <span style={textName}>—————</span>Mesud AYDIN
         </h3>
         <h1 style={text_color_head}>{myData.data.intro.head}</h1>
         <p style={text_color}>{myData.data.intro.content}</p>
         <div className="buttons">
           <Link
+            to="/contact_me"
             className="default"
             style={{
               padding: "12px 22px",
@@ -57,9 +59,11 @@ function Info() {
               color: !themeMode ? "#000" : "#fff",
             }}
           >
-            Hire me
+            {myData.data.other.hireMe}
           </Link>
           <Link
+            to={{ pathname: "https://github.com/Messudd" }}
+            target="_blank"
             style={{
               ...buttonTheme,
               transform: hoverGit && "scale(1.05 ,1)",
@@ -75,6 +79,8 @@ function Info() {
             Github
           </Link>
           <Link
+            to={{ pathname: "https://www.linkedin.com/in/messud"}}
+            target="_blank"
             onMouseEnter={hoverEnterMethod}
             onMouseLeave={hoverLeaveMethod}
             style={{
