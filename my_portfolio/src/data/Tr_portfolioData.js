@@ -24,12 +24,7 @@ const myTR_Info = {
       con : 'Bana Ulaş !'
     },
     skills: {
-      name: ["Java Script", "React Js", "Node Js"],
-      content: [
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      ],
+      name: ["https://wikiskola.se/images/thumb/6/6a/JavaScript-logo.png/JavaScript-logo.png", "https://miro.medium.com/v2/resize:fit:600/1*jnqXL4Q-iW0qxodFDTxyFQ.jpeg", "https://daqxzxzy8xq3u.cloudfront.net/wp-content/uploads/2019/04/21032431/redux-cover-imgage-1024x768.jpg","https://cdn-icons-png.flaticon.com/512/732/732212.png", "https://logospng.org/download/css-3/logo-css-3-2048.png", "https://e7.pngegg.com/pngimages/431/965/png-clipart-figma-designer-computer-icons-material-design-design-rectangle-poster-thumbnail.png"]
     },
     profile: {
       date_of_birth: "04.07.1994",

@@ -6,7 +6,6 @@ import "../css/skills.css";
 const Skills = () => {
   const myState = useContext(dataContext);
   const skillName = myState.data.skills.name;
-  const skillContent = myState.data.skills.content;
   const temaMode = myState.mode;
 
   return (
@@ -19,7 +18,6 @@ const Skills = () => {
           <Skill
             key={index}
             skill_name={skill_name}
-            skill_content={skillContent[index]}
           />
         ))}
       </div>

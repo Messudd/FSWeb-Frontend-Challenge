@@ -1,14 +1,11 @@
 .card-skill {
-    flex: 1 1 150px;
     padding: 2px;
 }
-.card-skill h2 {
+.card-skill img {
+    border: 1px solid transparent;
+    border-radius: 10px;
     margin: 20px 0;
     color: #4338CA;
     font-size: 1.5rem;
     font-weight: 600;
-}
-.card-skill p {
-    color: #6B7280;
-    font-size: 12px;
 }

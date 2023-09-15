@@ -1,35 +1,62 @@
 import React, { useContext } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { dataContext } from "../context/dataContext";
-import '../css/proje.css'
+import "../css/proje.css";
 
 const Proje = ({ projeData }) => {
   const { used } = projeData;
   const stateMine = useContext(dataContext);
-  const {other} = stateMine.data;
+  const { other } = stateMine.data;
   const tema = stateMine.mode;
 
   const span_tema = {
-    color: !tema && '#8F88FF',
-    backgroundColor: !tema && '#383838',
-    border: !tema && '1px solid #8F88FF'
-    }
-    
+    color: !tema && "#8F88FF",
+    backgroundColor: !tema && "#383838",
+    border: !tema && "1px solid #8F88FF",
+  };
+//rgb(207, 203, 255)'
   return (
-    <div className="proje-card">
+    <div
+      className="proje-card"
+      style={{
+        backgroundColor: !tema && "rgb(37, 33, 40)",
+        border: !tema && "1px solid transparent",
+        borderBottom:  !tema && '3px solid rgb(174, 188, 207)'
+      }}
+    >
       <div className="url">
-        <img src= {projeData.image} alt="proje_görseli" width={250}/>
+        <img src={projeData.image} alt="proje_görseli" width={250} />
       </div>
-      <h2 style={{color: !(tema) && '#CFCBFF'}}>{projeData.name}</h2>
-      <p style={{color: !tema && '#FFFFFF'}}>{projeData.content}</p>
+      <h2 style={{ color: !tema && "#CFCBFF" }}>{projeData.name}</h2>
+      <p style={{ color: !tema && "#FFFFFF" }}>{projeData.content}</p>
       <div className="proje-spans">
         {used.map((item, index) => (
-          <span style={span_tema} key={index}>{item}</span>
+          <span style={span_tema} key={index}>
+            {item}
+          </span>
         ))}
       </div>
       <div className="linkss">
-        <Link to = {{pathname: `${projeData.github}`}} target = '_blank' style = {{color: !tema && '#E1E1FF',borderBottom: !tema && '1px solid #E1E1FF'}}>Github</Link>
-        <Link to = {{ pathname :`${projeData.url}` }} target = '_blank' style = {{color: !tema && '#E1E1FF',borderBottom: !tema && '1px solid #E1E1FF'}}>{other.visit}</Link>
+        <Link
+          to={{ pathname: `${projeData.github}` }}
+          target="_blank"
+          style={{
+            color: !tema && "#E1E1FF",
+            borderBottom: !tema && "1px solid #E1E1FF",
+          }}
+        >
+          Github
+        </Link>
+        <Link
+          to={{ pathname: `${projeData.url}` }}
+          target="_blank"
+          style={{
+            color: !tema && "#E1E1FF",
+            borderBottom: !tema && "1px solid #E1E1FF",
+          }}
+        >
+          {other.visit}
+        </Link>
       </div>
     </div>
   );

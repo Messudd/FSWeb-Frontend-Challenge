@@ -180,7 +180,7 @@ const MoreInfo = () => {
             <FontAwesomeIcon
               id="spesificCon"
               className="ReIcon"
-              icon={openContainer.spesificCon ? faChevronDown : faChevronUp}
+              icon={openContainer.spesificCon ? faChevronUp : faChevronDown }
               onClick={(e) => openContainerMethod(e)}
             />
           </div>
@@ -189,7 +189,7 @@ const MoreInfo = () => {
             <span>{inInfo}</span>
             <FontAwesomeIcon
               className="ReIcon"
-              icon={openContainer.introCon ? faChevronDown : faChevronUp}
+              icon={openContainer.introCon ? faChevronUp : faChevronDown}
               id="introCon"
               onClick={(e) => openContainerMethod(e)}
             />
@@ -199,7 +199,7 @@ const MoreInfo = () => {
             <span>{ex}</span>
             <FontAwesomeIcon
               className="ReIcon"
-              icon={openContainer.experienceCon ? faChevronDown : faChevronUp}
+              icon={openContainer.experienceCon ? faChevronUp : faChevronDown}
               id="experienceCon"
               onClick={(e) => openContainerMethod(e)}
             />
@@ -209,7 +209,7 @@ const MoreInfo = () => {
             <span>{cn}</span>
             <FontAwesomeIcon
               className="ReIcon"
-              icon={openContainer.contactCon ? faChevronDown : faChevronUp}
+              icon={openContainer.contactCon ? faChevronUp : faChevronDown}
               id="contactCon"
               onClick={(e) => openContainerMethod(e)}
             />
@@ -219,7 +219,7 @@ const MoreInfo = () => {
             <span>{edu}</span>
             <FontAwesomeIcon
               className="ReIcon"
-              icon={openContainer.educationCon ? faChevronDown : faChevronUp}
+              icon={openContainer.educationCon ? faChevronUp : faChevronDown}
               id="educationCon"
               onClick={(e) => openContainerMethod(e)}
             />
@@ -229,7 +229,7 @@ const MoreInfo = () => {
             <span>{lan}</span>
             <FontAwesomeIcon
               className="ReIcon"
-              icon={openContainer.languageCon ? faChevronDown : faChevronUp}
+              icon={openContainer.languageCon ? faChevronUp : faChevronDown}
               id="languageCon"
               onClick={(e) => openContainerMethod(e)}
             />
@@ -239,7 +239,7 @@ const MoreInfo = () => {
             <span>{hob}</span>
             <FontAwesomeIcon
               className="ReIcon"
-              icon={openContainer.hobbiesCon ? faChevronDown : faChevronUp}
+              icon={openContainer.hobbiesCon ? faChevronUp : faChevronDown}
               id="hobbiesCon"
               onClick={(e) => openContainerMethod(e)}
             />

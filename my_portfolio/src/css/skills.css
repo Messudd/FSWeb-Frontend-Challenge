@@ -1,9 +1,10 @@
 .skillsMap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center; 
-  gap: 40px;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
 }
 
 .skills h1{
