@@ -50,7 +50,7 @@ const myInfo = {
       url: "https://challenge-pizza-orcku6296-messudd.vercel.app/",
     },
     {
-      image: './../image/Film_App.png',
+      image: './../image/playerAPP.png',
       name: "Film App",
       content:
         "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
