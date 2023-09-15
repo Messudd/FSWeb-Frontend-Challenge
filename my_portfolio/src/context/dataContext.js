@@ -10,7 +10,7 @@ const modeInitial = false;
 export const writeLocalStorage = (data, key) => {
   return localStorage.setItem(key, JSON.stringify(data));
 };
-const readLocalStorage = (key) => {
+export const readLocalStorage = (key) => {
   return JSON.parse(localStorage.getItem(key));
 };
 

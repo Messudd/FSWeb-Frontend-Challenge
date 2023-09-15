@@ -6,6 +6,7 @@ import {
   dataContext,
   writeLocalStorage,
   writeModeLocalStorage,
+  readLocalStorage
 } from "../context/dataContext";
 import myInfo from "../data/EN_portfolioData";
 import myTR_Info from "../data/Tr_portfolioData";
@@ -52,9 +53,8 @@ const TopNavbar = () => {
   }, [language]);
 
   useEffect(() => {
-    console.log("language : ", language);
-    language === false ? setData({ ...myInfo }) : setData({ ...myTR_Info });
-  }, [language, setData]);
+     setData(readLocalStorage('info'));
+  }, [language,setData]);
 
   useEffect(() => {
     console.log("switch tıklandı : ", mode);
