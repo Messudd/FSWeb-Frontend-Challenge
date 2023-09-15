@@ -251,5 +251,3 @@ const MoreInfo = () => {
   );
 };
 export default MoreInfo;
-
-// #6B7280; font-color

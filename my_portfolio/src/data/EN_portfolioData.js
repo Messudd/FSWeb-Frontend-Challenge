@@ -2,7 +2,7 @@ const myInfo = {
   intro: {
     head: " Creative thinker Minimalism lover",
     content:
-      "Hi, I’m Almila. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me.",
+      "Hi, I’m Mesud. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me.",
   },
   other: {
     hireMe: 'Hire me',
@@ -32,7 +32,7 @@ const myInfo = {
     ],
   },
   profile: {
-    date_of_birth: "04.07.1993",
+    date_of_birth: "04.07.1994",
     city: "İstanbul",
     education: "Erciyes Ünv. Elektrik - Elektronik Mühendisliği",
     role: "Frontend, UI",

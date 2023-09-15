@@ -2,7 +2,7 @@ const myTR_Info = {
     intro: {
       head: " Merhaba Ben Mesud",
       content:
-        "Hi, I’m Almila. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me.",
+        "I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me.",
     },
     other: {
       hireMe: 'İletişim',
@@ -32,7 +32,7 @@ const myTR_Info = {
       ],
     },
     profile: {
-      date_of_birth: "04/07/1993",
+      date_of_birth: "04.07.1994",
       city: "GİRESUN",
       education: "Erciyes Ünv. Elektrik - Elektronik Mühendisliği",
       role: "Frontend, UI",
