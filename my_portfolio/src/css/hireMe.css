@@ -1,10 +1,12 @@
 .container {
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .form-container {
+    flex:0.5;
     padding: 10px 45px;
     background-color: #F9F9F9;
     box-shadow: 0 3px 12px rgb(0 0 0 / 0.2);
