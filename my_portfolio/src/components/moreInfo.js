@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { dataContext } from "../context/dataContext";
 import AnimatedPage from "./animatedPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

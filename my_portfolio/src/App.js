@@ -26,23 +26,26 @@ function App() {
   useEffect(() => {
     window.addEventListener('scroll',() => {
       setScroll({scrollY: window.scrollY});
-  })
+    });
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+  }
   },[]);
   
   useEffect(() => {
     console.log('scroll - Y : ',scroll.scrollY);
-    if (scroll.scrollY > 350) { //arbitrary amount
+    if (scroll.scrollY > 320) { //arbitrary amount
       setComp({...comp, skillsMe: <Skills/>});
     }
-    if (scroll.scrollY > 570) { //arbitrary amount
+    if (scroll.scrollY > 550) { //arbitrary amount
       setComp({...comp, profileMe: <Profile/>});
     }
-    if (scroll.scrollY > 800) { //arbitrary amount
+    if (scroll.scrollY > 780) { //arbitrary amount
       setComp({...comp, ProjectsMe: <ProjectsParent/>});
     }
   },[scroll.scrollY]);
 
-  console.log('component : ',comp);
+ 
 
   return (
     <Switch>
