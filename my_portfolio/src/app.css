@@ -41,8 +41,6 @@ body {
   max-width: 70%;
   margin: 15px auto;
   padding-bottom: 20px;
-  border-top: 1px solid rgba(186, 178, 231, 1);
-  border-bottom: 1px solid rgba(186, 178, 231, 1);
 }
 .project-section{
   max-width: 70%;

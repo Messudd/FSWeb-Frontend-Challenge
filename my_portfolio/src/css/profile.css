@@ -1,3 +1,8 @@
+.profile{
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(186, 178, 231, 1);
+    border-bottom: 1px solid rgba(186, 178, 231, 1);
+}
 .profile-div {
     display: flex;
     flex-wrap: wrap;

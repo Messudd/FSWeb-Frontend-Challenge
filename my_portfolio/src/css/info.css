@@ -1,6 +1,7 @@
 .info-img {
     background: url('../../public/image/mesud.jpg');
     background-repeat: no-repeat;
+    filter: brightness(80%);
     flex: 1;
     height: 300px;
     background-size: cover;
@@ -8,6 +9,9 @@
     border: 1px solid #ccc;
     border-radius: 20px;
     box-shadow: 0 0 20px 2px  #000;
+}
+.info-img:hover {
+    filter:brightness(100%);
 }
 .info_right {
     display: flex;
@@ -24,11 +28,11 @@
     color:#1F2937;
 }
 .info_right h3 {
-    color: rgba(71, 49, 211, 1);
+    font-size: 1.1rem;
+    color: #3730A3;
 }
 .info_right span {
     margin-right: 10px;
-    color: #3730A3;
 }
 .info_right p {
     color:  #6B7280;
