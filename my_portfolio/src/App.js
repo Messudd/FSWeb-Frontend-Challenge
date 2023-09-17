@@ -33,7 +33,6 @@ function App() {
   },[]);
   
   useEffect(() => {
-    console.log('scroll - Y : ',scroll.scrollY);
     if (scroll.scrollY > 320) { //arbitrary amount
       setComp({...comp, skillsMe: <Skills/>});
     }

@@ -97,3 +97,17 @@
 .lang-div p span:last-child{
     font-size: 0.8rem;
 }
+.resumeButton {
+    background-color: #ffff;
+    border: 1px solid rgb(55, 48, 163);
+    cursor: pointer;
+    color: rgb(55, 48, 163);
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: 600;
+}
+.resumeButton:hover {
+    transition:  all .5s ease;
+    background-color: rgb(55, 48, 163);
+    color: #ffff;
+}

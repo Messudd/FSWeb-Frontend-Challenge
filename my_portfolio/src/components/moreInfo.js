@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { dataContext } from "../context/dataContext";
 import AnimatedPage from "./animatedPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,10 +7,10 @@ import "../css/moreInfo.css";
 
 const SpesificContainer = () => {
   const state = useContext(dataContext);
-  const {mode}= state;
+  const { mode } = state;
   const { gender, military, nation, driver, gen, mil, nat, dr } =
-  state.data.infoPage.spesificInfo;
-  
+    state.data.infoPage.spesificInfo;
+
   const fontColor = {
     color: !mode && "#fff",
   };
@@ -41,7 +41,7 @@ const SpesificContainer = () => {
 
 const IntroContainer = () => {
   const state = useContext(dataContext);
-  const {mode}= state;
+  const { mode } = state;
   const { introInfo } = state.data.infoPage;
   const fontColor = {
     color: !mode && "#fff",
@@ -57,7 +57,7 @@ const IntroContainer = () => {
 };
 const ExperienceContainer = () => {
   const state = useContext(dataContext);
-  const {mode}= state;
+  const { mode } = state;
   const fontColor = {
     color: !mode && "#fff",
   };
@@ -69,7 +69,7 @@ const ExperienceContainer = () => {
 };
 const EducationContainer = () => {
   const state = useContext(dataContext);
-  const {mode}= state;
+  const { mode } = state;
   const fontColor = {
     color: !mode && "#fff",
   };
@@ -82,7 +82,7 @@ const EducationContainer = () => {
 };
 const ContactContainer = () => {
   const state = useContext(dataContext);
-  const {mode}= state;
+  const { mode } = state;
   const fontColor = {
     color: !mode && "#fff",
   };
@@ -95,8 +95,8 @@ const ContactContainer = () => {
 };
 const LanguageContainer = () => {
   const state = useContext(dataContext);
-  const {mode}= state;
-  const {lang} = state.data.infoPage;
+  const { mode } = state;
+  const { lang } = state.data.infoPage;
   const fontColor = {
     color: !mode && "#fff",
   };
@@ -118,8 +118,8 @@ const LanguageContainer = () => {
 };
 const HobbiesContainer = () => {
   const state = useContext(dataContext);
-  const {mode}= state;
-  const {hobbies} = state.data.infoPage;
+  const { mode } = state;
+  const { hobbies } = state.data.infoPage;
   const fontColor = {
     color: !mode && "#fff",
   };
@@ -141,9 +141,11 @@ const HobbiesContainer = () => {
 
 const MoreInfo = () => {
   const state = useContext(dataContext);
-  const {mode}= state;
+  const { mode } = state;
   const { my_Info, general } = state.data.infoPage;
   const { spec, inInfo, ex, cn, edu, lan, hob } = general;
+
+  const resumeUrl = "http://localhost:3000/mesResume.pdf";
 
   const [openContainer, setOpenContainer] = useState({
     spesificCon: false,
@@ -155,6 +157,16 @@ const MoreInfo = () => {
     hobbiesCon: false,
   });
 
+  const downloadResume = (url) => {
+    const pdfName = url.split("/").pop();
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", pdfName);
+
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  };
 
   const openContainerMethod = (e) => {
     const { id } = e.target;
@@ -180,11 +192,11 @@ const MoreInfo = () => {
             <FontAwesomeIcon
               id="spesificCon"
               className="ReIcon"
-              icon={openContainer.spesificCon ? faChevronUp : faChevronDown }
+              icon={openContainer.spesificCon ? faChevronUp : faChevronDown}
               onClick={(e) => openContainerMethod(e)}
             />
           </div>
-          {openContainer.spesificCon && <SpesificContainer/>}
+          {openContainer.spesificCon && <SpesificContainer />}
           <div className="intro_">
             <span>{inInfo}</span>
             <FontAwesomeIcon
@@ -194,7 +206,7 @@ const MoreInfo = () => {
               onClick={(e) => openContainerMethod(e)}
             />
           </div>
-          {openContainer.introCon && <IntroContainer/>}
+          {openContainer.introCon && <IntroContainer />}
           <div className="experience_">
             <span>{ex}</span>
             <FontAwesomeIcon
@@ -204,7 +216,7 @@ const MoreInfo = () => {
               onClick={(e) => openContainerMethod(e)}
             />
           </div>
-          {openContainer.experienceCon && <ExperienceContainer/>}
+          {openContainer.experienceCon && <ExperienceContainer />}
           <div className="contact_">
             <span>{cn}</span>
             <FontAwesomeIcon
@@ -214,7 +226,7 @@ const MoreInfo = () => {
               onClick={(e) => openContainerMethod(e)}
             />
           </div>
-          {openContainer.contactCon && <ContactContainer/>}
+          {openContainer.contactCon && <ContactContainer />}
           <div className="education_">
             <span>{edu}</span>
             <FontAwesomeIcon
@@ -224,7 +236,7 @@ const MoreInfo = () => {
               onClick={(e) => openContainerMethod(e)}
             />
           </div>
-          {openContainer.educationCon && <EducationContainer/>}
+          {openContainer.educationCon && <EducationContainer />}
           <div className="language_">
             <span>{lan}</span>
             <FontAwesomeIcon
@@ -234,7 +246,7 @@ const MoreInfo = () => {
               onClick={(e) => openContainerMethod(e)}
             />
           </div>
-          {openContainer.languageCon && <LanguageContainer/>}
+          {openContainer.languageCon && <LanguageContainer />}
           <div className="hobbies_">
             <span>{hob}</span>
             <FontAwesomeIcon
@@ -244,7 +256,22 @@ const MoreInfo = () => {
               onClick={(e) => openContainerMethod(e)}
             />
           </div>
-          {openContainer.hobbiesCon && <HobbiesContainer/>}
+          {openContainer.hobbiesCon && <HobbiesContainer />}
+          <button
+            type="button"
+            style={{
+              color: !mode && "#ffff",
+              opacity: '0.8',
+              border: !mode && "1px solid #6b7280",
+              backgroundColor: !mode && "rgb(56, 56, 56)",
+            }}
+            className="resumeButton"
+            onClick={() => {
+              downloadResume(resumeUrl);
+            }}
+          >
+            Download Resume
+          </button>
         </div>
       </div>
     </div>
