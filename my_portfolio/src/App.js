@@ -11,7 +11,6 @@ import AnimatedPage from "./components/animatedPage";
 import HireMe from "./components/hireMe";
 import MoreInfo from "./components/moreInfo";
 import "./app.css";
-import Dashboard from "./components/dashboard";
 
 function App() {
   const [scroll, setScroll] = useState({ scrollY: null });
