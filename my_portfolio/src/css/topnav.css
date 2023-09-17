@@ -152,3 +152,20 @@ input:checked + .slider:before {
 .letter-M:hover {
   transform: rotate(360deg);
 }
+.dashboard {
+  border:1px solid transparent;
+  padding: 5px 15px;
+  margin-right: 15px;
+  text-decoration: none;
+  background-color: #3730A3;
+  transition: all .5s ease;
+  color: #ffff;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+}
+.dashboard:hover {
+  background-color: #fff;
+  color: #3730A3;
+  border:1px solid #3730A3;
+}

@@ -8,6 +8,7 @@ const BottomNav = () => {
   const { other } = myState.data;
   const themeMode = myState.mode;
 
+
   return (
     <div className="bottom-nav">
       <h2 style={{ color: !themeMode && "#AEBCCF" }}>{other.footerSlogan}</h2>
@@ -31,7 +32,7 @@ const BottomNav = () => {
           >
             Linkedin
           </Link>
-          <Link to="/moreInfo">{other.more}</Link>
+          <Link to="/moreInfo" >{other.more}</Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import {
   dataContext,
@@ -10,7 +11,6 @@ import {
 } from "../context/dataContext";
 import myInfo from "../data/EN_portfolioData";
 import myTR_Info from "../data/Tr_portfolioData";
-import { Link } from "react-router-dom";
 import "./../css/topnav.css";
 
 const TopNavbar = () => {
@@ -64,6 +64,7 @@ const TopNavbar = () => {
   return (
     <>
       <div className="nav-first">
+        <Link className = 'dashboard' to = '/dashboard'>Dashboard</Link>
         <label className="switch">
           <input type="checkbox" checked={mode} onChange={themeMode} />
           <span className="slider round"></span>

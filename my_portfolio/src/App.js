@@ -2,7 +2,7 @@ import TopNavbar from "./components/topNavbar";
 import Info from "./components/info";
 import Skills from "./components/skills";
 import Profile from "./components/profile";
-import  ProjectsParent from './components/projectsParent';
+import ProjectsParent from "./components/projectsParent";
 import { Route, Switch } from "react-router-dom";
 import BottomNav from "./components/bottomNav";
 import { useContext, useEffect, useState } from "react";
@@ -11,40 +11,38 @@ import AnimatedPage from "./components/animatedPage";
 import HireMe from "./components/hireMe";
 import MoreInfo from "./components/moreInfo";
 import "./app.css";
+import Dashboard from "./components/dashboard";
 
 function App() {
-  const [scroll , setScroll] = useState({scrollY : null});
-  const [comp ,setComp] = useState({
-    skillsMe : null,
+  const [scroll, setScroll] = useState({ scrollY: null });
+  const [comp, setComp] = useState({
+    skillsMe: null,
     profileMe: null,
-    ProjectsMe: null
+    ProjectsMe: null,
   });
   const myState = useContext(dataContext);
   const themeMode = myState.mode;
 
-
   useEffect(() => {
-    window.addEventListener('scroll',() => {
-      setScroll({scrollY: window.scrollY});
+    window.addEventListener("scroll", () => {
+      setScroll({ scrollY: window.scrollY });
     });
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
-  }
-  },[]);
-  
-  useEffect(() => {
-    if (scroll.scrollY > 320) { //arbitrary amount
-      setComp({...comp, skillsMe: <Skills/>});
-    }
-    if (scroll.scrollY > 550) { //arbitrary amount
-      setComp({...comp, profileMe: <Profile/>});
-    }
-    if (scroll.scrollY > 780) { //arbitrary amount
-      setComp({...comp, ProjectsMe: <ProjectsParent/>});
-    }
-  },[scroll.scrollY]);
+    };
+  }, []);
 
- 
+  useEffect(() => {
+    if (scroll.scrollY > 320) {
+      setComp({ ...comp, skillsMe: <Skills /> });
+    }
+    if (scroll.scrollY > 550) {
+      setComp({ ...comp, profileMe: <Profile /> });
+    }
+    if (scroll.scrollY > 800) {
+      setComp({ ...comp, ProjectsMe: <ProjectsParent /> });
+    }
+  }, [scroll.scrollY]);
 
   return (
     <Switch>
@@ -58,14 +56,12 @@ function App() {
           </header>
           <main>
             <section className="info-section">
-              <Info/>
+              <Info />
             </section>
             <section id="skillss" className="skills-section">
               {comp.skillsMe}
             </section>
-            <section className="profile-section">
-              {comp.profileMe}
-            </section>
+            <section className="profile-section">{comp.profileMe}</section>
             <section id="projectss" className="project-section">
               {comp.ProjectsMe}
             </section>
@@ -80,8 +76,11 @@ function App() {
           <HireMe />
         </AnimatedPage>
       </Route>
-      <Route path = '/moreInfo'>
-        <MoreInfo/>
+      <Route path="/moreInfo">
+        <MoreInfo />
+      </Route>
+      <Route path="/dashboard" exact>
+          <Dashboard />
       </Route>
     </Switch>
   );

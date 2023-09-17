@@ -261,7 +261,6 @@ const MoreInfo = () => {
             type="button"
             style={{
               color: !mode && "#ffff",
-              opacity: '0.8',
               border: !mode && "1px solid #6b7280",
               backgroundColor: !mode && "rgb(56, 56, 56)",
             }}
