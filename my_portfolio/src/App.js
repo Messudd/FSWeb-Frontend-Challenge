@@ -79,9 +79,6 @@ function App() {
       <Route path="/moreInfo">
         <MoreInfo />
       </Route>
-      <Route path="/dashboard" exact>
-          <Dashboard />
-      </Route>
     </Switch>
   );
 }

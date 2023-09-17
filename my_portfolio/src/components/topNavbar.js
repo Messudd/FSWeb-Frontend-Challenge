@@ -64,7 +64,6 @@ const TopNavbar = () => {
   return (
     <>
       <div className="nav-first">
-        <Link className = 'dashboard' to = '/dashboard'>Dashboard</Link>
         <label className="switch">
           <input type="checkbox" checked={mode} onChange={themeMode} />
           <span className="slider round"></span>
