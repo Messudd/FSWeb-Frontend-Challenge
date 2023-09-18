@@ -62,6 +62,15 @@ const myTR_Info = {
         github: "https://github.com/Messudd/fsweb-s7g2-team-builder",
         url: "https://fsweb-s7g2-team-builder-jdsktdvrs-messudd.vercel.app/",
       },
+      {
+        image: './../image/nasaAPI.png',
+        name: "Nasa API",
+        content:
+          "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+        used: ["React(Props)", "Axios"],
+        github: "https://github.com/Messudd/FSWeb-S6G3-Nasa",
+        url: "https://fs-web-s6-g3-nasa-o8k6o6wnz-messudd.vercel.app/"
+      }
     ],
     infoPage :{
       general:{
