@@ -66,7 +66,6 @@ const DataContext = ({ children }) => {
     postData(data);
   }, []);
 
-
   return (
     <dataContext.Provider
       value={{ data, setData, language, setLanguage, mode, setMode ,formData, setFormData }}

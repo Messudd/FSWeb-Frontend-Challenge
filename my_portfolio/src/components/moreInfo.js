@@ -58,38 +58,73 @@ const IntroContainer = () => {
 const ExperienceContainer = () => {
   const state = useContext(dataContext);
   const { mode } = state;
+  const { exper } = state.data.infoPage;
   const fontColor = {
     color: !mode && "#fff",
   };
   return (
     <AnimatedPage>
-      <div style={fontColor}>Experience - Container</div>
+      <div className="intro-info">
+        <ul style={{ listStyleType: "none" }}>
+          <li
+            style={{
+              color: mode ? "rgb(143, 136, 255)" : "#fff",
+              fontWeight: "bold",
+            }}
+          >
+            {exper.date}
+          </li>
+          <li
+            style={{
+              color: mode ? "rgb(143, 136, 255)" : "#fff",
+              margin: "15px 0",
+              fontWeight: "bold",
+            }}
+          >
+            {exper.company}
+          </li>
+        </ul>
+        <h3 style={fontColor}>{exper.job}</h3>
+        <p style={fontColor}>{exper.content}</p>
+      </div>
     </AnimatedPage>
   );
 };
 const EducationContainer = () => {
   const state = useContext(dataContext);
   const { mode } = state;
+  const { edu } = state.data.infoPage;
   const fontColor = {
     color: !mode && "#fff",
   };
 
   return (
     <AnimatedPage>
-      <div style={fontColor}>Education - Container</div>
+      <div className="intro-info">
+        <h3>{edu[0]}</h3>
+        <p style={fontColor}>{edu[1]}</p>
+        <h3 style={{paddingTop : "10px"}}>{edu[2]}</h3>
+        <p style={fontColor}>{edu[3]}</p>
+      </div>
     </AnimatedPage>
   );
 };
 const ContactContainer = () => {
   const state = useContext(dataContext);
   const { mode } = state;
+  const { contactMe } = state.data.infoPage;
   const fontColor = {
     color: !mode && "#fff",
   };
 
   return (
     <AnimatedPage>
-      <div style={fontColor}>Contact - Container</div>
+      <div className="intro-info">
+        <h3>{contactMe.mob[0]}</h3>
+        <p style={fontColor}>{contactMe.mob[1]}</p>
+        <h3 style={{ marginTop: "5px" }}>{contactMe.emailMe[0]}</h3>
+        <p style={fontColor}>{contactMe.emailMe[1]}</p>
+      </div>
     </AnimatedPage>
   );
 };
@@ -127,13 +162,15 @@ const HobbiesContainer = () => {
   return (
     <AnimatedPage>
       <div className="hobies-div">
-        {[...hobbies].map((context, index) => {
-          return (
-            <li style={fontColor} key={index}>
-              {context}
-            </li>
-          );
-        })}
+        <ul style={{ listStyleType: "none" }}>
+          {[...hobbies].map((context, index) => {
+            return (
+              <li style={fontColor} key={index}>
+                {context}
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </AnimatedPage>
   );

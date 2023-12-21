@@ -32,13 +32,13 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (scroll.scrollY > 320) {
+    if (scroll.scrollY > 150) {
       setComp({ ...comp, skillsMe: <Skills /> });
     }
-    if (scroll.scrollY > 550) {
+    if (scroll.scrollY > 320) {
       setComp({ ...comp, profileMe: <Profile /> });
     }
-    if (scroll.scrollY > 800) {
+    if (scroll.scrollY > 580) {
       setComp({ ...comp, ProjectsMe: <ProjectsParent /> });
     }
   }, [scroll.scrollY]);

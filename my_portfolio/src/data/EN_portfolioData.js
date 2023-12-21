@@ -27,20 +27,20 @@ const myInfo = {
     name: ["https://wikiskola.se/images/thumb/6/6a/JavaScript-logo.png/JavaScript-logo.png", "https://miro.medium.com/v2/resize:fit:600/1*jnqXL4Q-iW0qxodFDTxyFQ.jpeg", "https://daqxzxzy8xq3u.cloudfront.net/wp-content/uploads/2019/04/21032431/redux-cover-imgage-1024x768.jpg","https://cdn-icons-png.flaticon.com/512/732/732212.png", "https://logospng.org/download/css-3/logo-css-3-2048.png", "https://e7.pngegg.com/pngimages/431/965/png-clipart-figma-designer-computer-icons-material-design-design-rectangle-poster-thumbnail.png"],
   },
   profile: {
-    date_of_birth: "04.07.1994",
-    city: "İstanbul",
-    education: "Erciyes Ünv. Elektrik - Elektronik Mühendisliği",
+    date_of_birth: "04.07.1993",
+    city: "İstanbul / Pendik",
+    education: "Erciyes Universty - Electrical and Electronics Engineering",
     role: "Frontend, UI",
     about:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam! ",
+      "As an electronics engineer, I have always been very interested in the software world for this reason, I decided to become a software developer and took a 6-month full - stack bootcamp training. I  hope that I can further develop this experience under teamwork in real and challenging projects in the sector and achieve excellence. If you are looking for a member of your team,  I am here.",
   },
   projects: [
     {
       image: './../image/pizzaApp.png',
       name: "Pizza Order",
       content:
-        "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-      used: ["React", "Redux", "Axios"],
+        "In this pizza project, upon the user accurately filling out the order form, a redirection process to the confirmation page is implemented upon clicking the Place Order button.",
+      used: ["React", "Yup", "Axios"],
       github: "https://github.com/Messudd/fsweb-s7-challenge-pizza",
       url: "https://challenge-pizza-orcku6296-messudd.vercel.app/",
     },
@@ -48,8 +48,8 @@ const myInfo = {
       image: './../image/filmApp.png',
       name: "Film App",
       content:
-        "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-      used: ["React", "Redux", "Axios"],
+        "A web application has been developed that pulls film data from an API, creates detailed pages for each film, and allows users to add selected films to their favorite list.",
+      used: ["React", "Props-Drilling", "Axios"],
       github: "https://github.com/Messudd/React_Film_App",
       url: "https://react-film-ghy8i4ap6-messudd.vercel.app/",
     },
@@ -57,20 +57,11 @@ const myInfo = {
       image: './../image/playerAPP.png',
       name: "Player Form",
       content:
-        "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-      used: ["React", "Redux", "Axios"],
+        "A web application was experienced where players can register, delete and update by validly filling out a form.In this application, feedback is given to the user with toastify.",
+      used: ["React", "Form - Validation","Toastify"],
       github: "https://github.com/Messudd/fsweb-s7g2-team-builder",
       url: "https://fsweb-s7g2-team-builder-jdsktdvrs-messudd.vercel.app/",
     },
-    {
-      image: './../image/nasaAPI.png',
-      name: "Nasa API",
-      content:
-        "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-      used: ["React(Props)", "Axios"],
-      github: "https://github.com/Messudd/FSWeb-S6G3-Nasa",
-      url: "https://fs-web-s6-g3-nasa-o8k6o6wnz-messudd.vercel.app/"
-    }
   ],
   infoPage :{
     general:{
@@ -96,9 +87,20 @@ const myInfo = {
       summary: 'Summary',
       content: 'As an electronics engineer, I am interested in many areas of the software world, especially in the electronic field, such as embedded software development and desktop GUI development for these software. In addition, I like to deal with front end technologies in the web field and develop and share personal projects in these areas. I can say that this is more than a hobby for me. I hope that in the business world, I can engage in work that I enjoy and love doing, and that I can have the opportunity to improve myself a lot in these areas.',
     },
-    hobbies: ['ANİMATİON','FILM','DOCUMENTARY','MITOLOGI','ASTRONOMI'],
+    exper : {
+    date : "August 2022- March 2023",
+    company : "OTAM A.Ş l Tosb , Kocaeli",
+    job:"Test Engineer",
+    content: "In the automotive sector, specific part tests have been conducted. The process involved the formulation of test scenarios, the execution of the testing procedures, and the reporting of results for incoming parts. Throughout this process, the conducted tests generally focused on fatigue, durability, and vibration."
+  },
+    contactMe : {
+      mob : ["Mobile :" , "+905364529415"],
+      emailMe : ["Email :" ,"eem.mesud.28@gmail.com"]
+    } ,
+    edu : ["Universty : ", "Erciyes - Universty | Electrical - Electronics Engineering","Course : ","Workintech | Full Stack Developer"],
+    hobbies: ['Animation','Film','Documentary','Mitologi','Astronomi'],
     my_Info: 'MY INFO',
-    lang: {lg: ['- Turkish ', '- English '],level: ['(Main-Language)','(Middle-Level)']},
+    lang: {lg: ['- Turkish ', '- English '],level: ['(Native)','(Middle-Level)']},
   }
 };
 

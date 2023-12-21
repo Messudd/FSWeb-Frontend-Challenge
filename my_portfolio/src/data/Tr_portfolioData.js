@@ -2,7 +2,7 @@ const myTR_Info = {
     intro: {
       head: " Merhaba Ben Mesud",
       content:
-        "I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me.",
+        "Ben bir full - stack geliştiriciyim. Mükemmel kullanıcı deneyimleriyle sağlam ve ölçeklenebilir ön uç ürünleri üretecek bir geliştirici arıyorsanız. Benimle iletişime geçin.",
     },
     other: {
       hireMe: 'İletişim',
@@ -27,20 +27,20 @@ const myTR_Info = {
       name: ["https://wikiskola.se/images/thumb/6/6a/JavaScript-logo.png/JavaScript-logo.png", "https://miro.medium.com/v2/resize:fit:600/1*jnqXL4Q-iW0qxodFDTxyFQ.jpeg", "https://daqxzxzy8xq3u.cloudfront.net/wp-content/uploads/2019/04/21032431/redux-cover-imgage-1024x768.jpg","https://cdn-icons-png.flaticon.com/512/732/732212.png", "https://logospng.org/download/css-3/logo-css-3-2048.png", "https://e7.pngegg.com/pngimages/431/965/png-clipart-figma-designer-computer-icons-material-design-design-rectangle-poster-thumbnail.png"]
     },
     profile: {
-      date_of_birth: "04.07.1994",
-      city: "GİRESUN",
+      date_of_birth: "04.07.1993",
+      city: "İstanbul / Pendik",
       education: "Erciyes Ünv. Elektrik - Elektronik Mühendisliği",
       role: "Frontend, UI",
       about:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam! ",
+        "Bir elektronik mühendisi olarak yazılım dünyasına her zaman çok ilgim vardı bu nedenle yazılımcı olmaya karar verdim ve 6 ay full-stack bootcamp eğitimi aldım. Umarım bu tecrübemi sektördeki gerçek ve zorlu projelerde ekip çalışmasıyla daha da geliştirip mükemmelliğe ulaşabilirim. Ekibinizin bir üyesini arıyorsanız ben buradayım.",
     },
     projects: [
       {
         image: './../image/pizzaApp.png',
         name: "Pizza Sipariş",
         content:
-          "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-        used: ["React", "Redux", "Axios"],
+          "Bu pizza projesinde kullanıcı sipariş formunu doğru bir şekilde doldurduktan sonra Sipariş Ver butonu tıklandığında onay sayfasına yönlendirme işlemi gerçekleştirilir.",
+        used: ["React", "Yup", "Axios"],
         github: "https://github.com/Messudd/fsweb-s7-challenge-pizza",
         url: "https://challenge-pizza-orcku6296-messudd.vercel.app/",
       },
@@ -48,8 +48,8 @@ const myTR_Info = {
         image: './../image/filmApp.png',
         name: "Film Uygulaması",
         content:
-          "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-        used: ["React", "Redux", "Axios"],
+          "Film verilerini bir API'den çeken, her film için ayrıntılı sayfalar oluşturan ve kullanıcıların seçilen filmleri favori listesine eklemesine olanak tanıyan bir web uygulaması geliştirildi.",
+        used: ["React", "Props - Dirilling", "Axios"],
         github: "https://github.com/Messudd/React_Film_App",
         url: "https://react-film-ghy8i4ap6-messudd.vercel.app/",
       },
@@ -57,20 +57,11 @@ const myTR_Info = {
         image: './../image/playerAPP.png',
         name: "Oyuncu Form Yönetimi",
         content:
-          "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-        used: ["React", "Redux", "Axios"],
+          "Oyuncuların bir formu valid bir şekilde doldurarak kayıt , silme ve güncelleme işlemlerinin gerçeklendiği bir web uygulaması deneyimlendi.",
+        used: ["React", "Form Validation"],
         github: "https://github.com/Messudd/fsweb-s7g2-team-builder",
         url: "https://fsweb-s7g2-team-builder-jdsktdvrs-messudd.vercel.app/",
       },
-      {
-        image: './../image/nasaAPI.png',
-        name: "Nasa API",
-        content:
-          "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-        used: ["React(Props)", "Axios"],
-        github: "https://github.com/Messudd/FSWeb-S6G3-Nasa",
-        url: "https://fs-web-s6-g3-nasa-o8k6o6wnz-messudd.vercel.app/"
-      }
     ],
     infoPage :{
       general:{
@@ -94,9 +85,20 @@ const myTR_Info = {
       },
       introInfo : {
         summary: 'Özet',
-        content: 'Bir elektronik mühendisi olarak yazılım dünyasının birçok alanına ilgi duymaktayım özellikle elektronik sahada embedded yazılım geliştirme ve bu yazılımlar için desktop GUI geliştirme gibi konulara oldukça ilgiliyim. Bunun yanı sıra web alanında ise Front end teknolojileri ile uğraşmayı ve bu alanlarda kişisel projeler geliştirmeyi , paylaşmayı seviyorum. Bu benim için hobiden daha fazlası diyebilirim. Umarım iş dünyasında da bu gibi keyif aldığım ve uğraşmayı sevdiğim işlerle meşgul olurum ve bu alanlarda kendimi oldukça fazla geliştirme imkanına sahip olabilirim.',
+        content: 'Yazılım sektörüne olan ilgimden dolayı kariyerime bu alanda devam etmek istedim bu sebebten 6 aylık full stack developer kursuna giriş yaptım ve kursun 3 aylık Front end kısmını tamamladım backend kısmı devam etmektedir. Ancak kurs bitmeden Front end developer olarak sahada tecrübe kazanmak en öncelikli hedefimdir. Kendimi bir front end geliştirici olarak görmekteyim umarım bu alanda geleceğimi şekillendirebilirim.',
       },
-      hobbies: ['ANİMASYON','FİLM','BELGESEL','MİTOLOJİ','ASTRONOMİ'],
+      exper : {
+        date : "Ağustos 2022- Mart 2023",
+        company : "OTAM A.Ş l Tosb , Kocaeli",
+        job:"Test Mühendisi",
+        content: "Otomotiv sektöründe spesifik parça testleri yapılmıştır. Süreç, test senaryolarının formüle edilmesini, test prosedürlerinin yürütülmesini ve gelen parçalar için sonuçların raporlanmasını içeriyordu. Bu süreç boyunca yapılan testler genel olarak yorulma, dayanıklılık ve titreşim üzerine yoğunlaştı."
+      },
+        contactMe : {
+          mob : ["Cep :" , "+905364529415"],
+          emailMe : ["Email :" ,"eem.mesud.28@gmail.com"]
+        } ,
+        edu : ["Üniversite : ", "Erciyes - Üniversitesi | Elektrik - Elektronik Mühendisliği","Kurs : ","Workintech | Full Stack Developer"],
+      hobbies: ['Animasyon','Film','Belgesel','Mitoloji','Astronomi'],
       my_Info: 'BİLGİLERİM',
       lang: {lg: ['- Türkçe ', '- İngilizce '],level: ['(Ana-Dil)','(Orta-Seviye)']},
     }
