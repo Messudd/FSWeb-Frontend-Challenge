@@ -49,7 +49,7 @@ const myTR_Info = {
         name: "Film Uygulaması",
         content:
           "Film verilerini bir API'den çeken, her film için ayrıntılı sayfalar oluşturan ve kullanıcıların seçilen filmleri favori listesine eklemesine olanak tanıyan bir web uygulaması geliştirildi.",
-        used: ["React", "Props - Dirilling", "Axios"],
+        used: ["React(Props)", "Axios"],
         github: "https://github.com/Messudd/React_Film_App",
         url: "https://react-film-ghy8i4ap6-messudd.vercel.app/",
       },

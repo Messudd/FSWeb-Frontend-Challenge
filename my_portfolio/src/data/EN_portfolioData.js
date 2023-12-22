@@ -49,7 +49,7 @@ const myInfo = {
       name: "Film App",
       content:
         "A web application has been developed that pulls film data from an API, creates detailed pages for each film, and allows users to add selected films to their favorite list.",
-      used: ["React", "Props-Drilling", "Axios"],
+      used: ["React(Props)", "Axios"],
       github: "https://github.com/Messudd/React_Film_App",
       url: "https://react-film-ghy8i4ap6-messudd.vercel.app/",
     },
@@ -58,7 +58,7 @@ const myInfo = {
       name: "Player Form",
       content:
         "A web application was experienced where players can register, delete and update by validly filling out a form.In this application, feedback is given to the user with toastify.",
-      used: ["React", "Form - Validation","Toastify"],
+      used: ["React", "Form - Validation"],
       github: "https://github.com/Messudd/fsweb-s7g2-team-builder",
       url: "https://fsweb-s7g2-team-builder-jdsktdvrs-messudd.vercel.app/",
     },
@@ -85,7 +85,7 @@ const myInfo = {
     },
     introInfo : {
       summary: 'Summary',
-      content: 'As an electronics engineer, I am interested in many areas of the software world, especially in the electronic field, such as embedded software development and desktop GUI development for these software. In addition, I like to deal with front end technologies in the web field and develop and share personal projects in these areas. I can say that this is more than a hobby for me. I hope that in the business world, I can engage in work that I enjoy and love doing, and that I can have the opportunity to improve myself a lot in these areas.',
+      content: 'Due to my interest in the software industry, I wanted to continue my career in this field, so I entered the 6-month full stack developer course and completed the 3-month Front end part of the course, and the backend part continues. However, my primary goal is to gain experience in the field as a Front end developer before the course is completed. I see myself as a front end developer and I hope I can shape my future in this field.',
     },
     exper : {
     date : "August 2022- March 2023",
